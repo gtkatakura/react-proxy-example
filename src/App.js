@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react-proxy';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ injected }) {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <span>{injected && 'Injected prop from react-proxy'}</span>
       </header>
     </div>
   );
